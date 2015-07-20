@@ -119,11 +119,11 @@ print "\nOriginal Message: ", true_msg[:80] + "...(continued)"
 print "Scrambled Message:", msg[:80] + "...(continued)"
 print "\n""Key:", "ABCDEFGHIJKLMNOPQRSTUVWXYZ ", '\n    ', vkey(key), '\n\n'
 
-
+#character frequency analysis option for intial key selection
 freq_an = raw_input("Incorporate frequency analysis (uni-gram attack) for initial proposal key? (y/n)\n")
 while True:
 	if freq_an == 'y':
-		true_freq = " ETAOINSHRDLCUMWFGYPBVKJXQZ"
+		true_freq = " ETAOINSHRDLCUMWFGYPBVKJXQZ" # character frequencies in the english language, descending order
 		msg_freq=[]
 		for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ ":
 			msg_freq.append((c,msg.count(c)))
